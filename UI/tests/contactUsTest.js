@@ -262,7 +262,7 @@ module.exports = {
             // Invalid Submission (no subject heading is selected )  
             contactUs
                 .setValue('@messageTextbox', 'no subject test.')
-                .setValue('@emailField', 'valid@mail')
+                .setValue('@emailField', 'valid@mail.com')
 
                 .click('@sendButton')
 
