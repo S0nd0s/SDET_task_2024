@@ -1,5 +1,7 @@
 # Automated UI and API Testing using NightwatchJS and Supertest
 
+[![CircleCI](https://dl.circleci.com/status-badge/img/circleci/PsPb9vfasB94JUdJWdLM8Q/584gY8ycFvjpC1ckER87Fw/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/circleci/PsPb9vfasB94JUdJWdLM8Q/584gY8ycFvjpC1ckER87Fw/tree/main)
+
 
 This repository demonstrates automated testing for UI and API functionalities using NightwatchJS for UI testing on the (multiformis.com) website and Supertest for API testing with the mock-user-auth module. The tests cover various scenarios including form submissions, search functionalities, and API validations under different conditions.
 
