@@ -15,3 +15,24 @@ CI/CD Integration: Integrated with CircleCI for automated testing upon each comm
 Bug Reporting: Reported bugs with detailed bug tickets for each issue found during testing, providing clear documentation for developers and stakeholders.
 
 Deliverables: HTML Reports: Generated HTML reports for both UI and API test results, ensuring easy visualization and sharing of test outcomes. Bug Tickets: Created structured bug tickets for identified issues, facilitating efficient bug tracking and resolution. Test Case Document: Prepared a comprehensive document outlining test cases for UI and API testing, ensuring clarity for all stakeholders
+
+## NightWatchjs UI
+
+### mandatory fields:
+- message [ for communication]
+- email [ to be able to contact this person]
+- subject heading [ as to know where to forward or to assign the message to which team]
+
+  ### optional fields:
+  - order reference [ not necessary user wants to acquire about an order or has already made an order]
+  - attach file [it's an extra option to enhance communicating the problem to the team]
+ 
+### please find the bug tickets, test case documentation, and HTML reports  each in a separate folder inside UI folder.
+
+###to run tests:
+for contact us tests
+```plaintext
+npx nightwatch tests/contactUsTest.js -e chrome
+```plaintext
+for dress search test
+npx nightwatch tests/homePageTest.js -e chrome
