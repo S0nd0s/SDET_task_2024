@@ -48,7 +48,8 @@ C:\Users\S0nd0\Documents\UI>npx nightwatch tests/homePageTest.js -e chrome
 ##  mock-user-auth - npm APIs  supertest
 
 
-### please find the  report   inside  a separate folder "report"  inside API folder.
+### please find the  report   inside  a separate folder "mochawesome-report"  inside the API folder.
+### also the bug ticket is in the "bug report" folder  inside the API folder
 
 ### to run tests:
 
@@ -56,4 +57,5 @@ C:\Users\S0nd0\Documents\UI>npx nightwatch tests/homePageTest.js -e chrome
 C:\Users\S0nd0\Downloads\API> npm test
 ```
 
-
+##note:
+for both API and UI  the node_modules folder needed to be installed or copied into the project before running it
