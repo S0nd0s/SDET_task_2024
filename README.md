@@ -23,16 +23,17 @@ Deliverables: HTML Reports: Generated HTML reports for both UI and API test resu
 - email [ to be able to contact this person]
 - subject heading [ as to know where to forward or to assign the message to which team]
 
-  ### optional fields:
+### optional fields:
   - order reference [ not necessary user wants to acquire about an order or has already made an order]
   - attach file [it's an extra option to enhance communicating the problem to the team]
  
 ### please find the bug tickets, test case documentation, and HTML reports  each in a separate folder inside UI folder.
 
-###to run tests:
+### to run tests:
 for contact us tests
-```plaintext
+
 npx nightwatch tests/contactUsTest.js -e chrome
-```plaintext
+
+
 for dress search test
 npx nightwatch tests/homePageTest.js -e chrome
