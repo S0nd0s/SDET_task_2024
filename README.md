@@ -47,7 +47,7 @@ C:\Users\S0nd0\Documents\UI>npx nightwatch tests/homePageTest.js -e chrome
 
 ##  mock-user-auth - npm APIs  supertest
 
-
+### I used mocha
 ### please find the  HTML and JSON reports inside  a separate folder "mochawesome-report"  inside the API folder.
 ### also the bug ticket is in the "bug report" folder  inside the API folder
 
