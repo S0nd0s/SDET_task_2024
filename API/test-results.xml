@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="2.190" tests="11" failures="5">
+  <testsuite name="Root Suite" timestamp="2024-07-11T16:29:27" tests="0" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="API Tests" timestamp="2024-07-11T16:29:27" tests="11" file="C:\Users\S0nd0\Downloads\API\test\api.test.js" time="2.188" failures="5">
+    <testcase name="API Tests should register a new user" time="0.056" classname="should register a new user">
+      <failure message="The expression evaluated to a falsy value:
+
+  assert.ok(authToken)
+" type="AssertionError"><![CDATA[AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+
+  assert.ok(authToken)
+
+    at Test.<anonymous> (test\api.test.js:19:16)
+    at Test.assert (node_modules\supertest\lib\test.js:172:8)
+    at Server.localAssert (node_modules\supertest\lib\test.js:120:14)
+    at Object.onceWrapper (node:events:633:28)
+    at Server.emit (node:events:519:28)
+    at emitCloseNT (node:net:2321:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:81:21)
+
+      + expected - actual:  failed to generate Mocha diff
+]]></failure>
+    </testcase>
+    <testcase name="API Tests should register a duplicated new user" time="2.014" classname="should register a duplicated new user">
+      <failure message="Timeout of 2000ms exceeded. For async tests and hooks, ensure &quot;done()&quot; is called; if returning a Promise, ensure it resolves. (C:\Users\S0nd0\Downloads\API\test\api.test.js)" type="Error"><![CDATA[Error: Timeout of 2000ms exceeded. For async tests and hooks, ensure "done()" is called; if returning a Promise, ensure it resolves. (C:\Users\S0nd0\Downloads\API\test\api.test.js)
+    at listOnTimeout (node:internal/timers:573:17)
+    at process.processTimers (node:internal/timers:514:7)]]></failure>
+    </testcase>
+    <testcase name="API Tests should authenticate user and return access token" time="0.024" classname="should authenticate user and return access token">
+    </testcase>
+    <testcase name="API Tests should not authenticate user with invalid credentials and return an error" time="0.012" classname="should not authenticate user with invalid credentials and return an error">
+    </testcase>
+    <testcase name="API Tests should get user details with valid token" time="0.014" classname="should get user details with valid token">
+    </testcase>
+    <testcase name="API Tests should not get user details with invalid token" time="0.006" classname="should not get user details with invalid token">
+    </testcase>
+    <testcase name="API Tests should update user details with valid token" time="0.011" classname="should update user details with valid token">
+      <failure message="Expected values to be strictly equal:
+[32m+ actual[39m [31m- expected[39m
+
+[32m+[39m &apos;User updated with success!&apos;
+[31m-[39m &apos;User updated with success&apos;
+                            ^" type="AssertionError"><![CDATA[AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+[32m+ actual[39m [31m- expected[39m
+
+[32m+[39m 'User updated with success!'
+[31m-[39m 'User updated with success'
+                            ^
+    at Test.<anonymous> (test\api.test.js:137:16)
+    at Test.assert (node_modules\supertest\lib\test.js:172:8)
+    at Server.localAssert (node_modules\supertest\lib\test.js:120:14)
+    at Object.onceWrapper (node:events:633:28)
+    at Server.emit (node:events:519:28)
+    at emitCloseNT (node:net:2321:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:81:21)
+
+      + expected - actual
+
+      -User updated with success!
+      +User updated with success
+      ]]></failure>
+    </testcase>
+    <testcase name="API Tests should not update user details with invalid token" time="0.008" classname="should not update user details with invalid token">
+      <failure message="Expected values to be strictly equal:
+[32m+ actual[39m [31m- expected[39m
+
+[32m+[39m &apos;jwt malformed&apos;
+[31m-[39m &apos;Unauthorized&apos;" type="AssertionError"><![CDATA[AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+[32m+ actual[39m [31m- expected[39m
+
+[32m+[39m 'jwt malformed'
+[31m-[39m 'Unauthorized'
+    at Test.<anonymous> (test\api.test.js:154:14)
+    at Test.assert (node_modules\supertest\lib\test.js:172:8)
+    at Server.localAssert (node_modules\supertest\lib\test.js:120:14)
+    at Object.onceWrapper (node:events:633:28)
+    at Server.emit (node:events:519:28)
+    at emitCloseNT (node:net:2321:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:81:21)
+
+      + expected - actual
+
+      -jwt malformed
+      +Unauthorized
+      ]]></failure>
+    </testcase>
+    <testcase name="API Tests should delete user with valid token" time="0.008" classname="should delete user with valid token">
+      <failure message="expected 200 &quot;OK&quot;, got 403 &quot;Forbidden&quot;" type="Error"><![CDATA[Error: expected 200 "OK", got 403 "Forbidden"
+    at Context.<anonymous> (test\api.test.js:168:8)
+    at process.processImmediate (node:internal/timers:478:21)
+----
+    at Test._assertStatus (node_modules\supertest\lib\test.js:252:14)
+    at C:\Users\S0nd0\Downloads\API\node_modules\supertest\lib\test.js:308:13
+    at Test._assertFunction (node_modules\supertest\lib\test.js:285:13)
+    at Test.assert (node_modules\supertest\lib\test.js:164:23)
+    at Server.localAssert (node_modules\supertest\lib\test.js:120:14)
+    at Object.onceWrapper (node:events:633:28)
+    at Server.emit (node:events:519:28)
+    at emitCloseNT (node:net:2321:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:81:21)]]></failure>
+    </testcase>
+    <testcase name="API Tests should delete all users with admin key" time="0.009" classname="should delete all users with admin key">
+    </testcase>
+    <testcase name="API Tests should return 403 for unauthorized access to /all-users" time="0.005" classname="should return 403 for unauthorized access to /all-users">
+    </testcase>
+  </testsuite>
+</testsuites>
