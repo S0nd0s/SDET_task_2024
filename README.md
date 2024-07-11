@@ -31,9 +31,10 @@ Deliverables: HTML Reports: Generated HTML reports for both UI and API test resu
 
 ### to run tests:
 for contact us tests
-
+'''
 npx nightwatch tests/contactUsTest.js -e chrome
 
 
 for dress search test
+'''
 npx nightwatch tests/homePageTest.js -e chrome
