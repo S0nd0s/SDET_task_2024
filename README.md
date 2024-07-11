@@ -45,7 +45,8 @@ C:\Users\S0nd0\Documents\UI>npx nightwatch tests/homePageTest.js -e chrome
 
 
 
-## NightWatchjs API
+##  mock-user-auth - npm APIs  supertest
+
 
 ### please find the  report   inside  a separate folder "report"  inside API folder.
 
