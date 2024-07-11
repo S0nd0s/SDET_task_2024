@@ -125,7 +125,7 @@ module.exports = {
 
 
             contactUs
-                // .docx large file
+                // .docx large withint the limit  file
                 .setValue('@messageTextbox', 'This is a valid message.')
 
                 .setValue('@emailField', 'test@example.com')
@@ -186,7 +186,9 @@ module.exports = {
 
                 .click('@sendButton')
 
-                .assert.containsText('@errorMessage', '');
+                .assert.containsText('@errorMessage', '')
+                
+                .assert.containsText('@errorMessageInfo', 'file');
 
             contactUs.navigate();
 
@@ -204,7 +206,8 @@ module.exports = {
 
                 .click('@sendButton')
 
-                .assert.containsText('@errorMessage', '');
+                .assert.containsText('@errorMessage', '')
+                .assert.containsText('@errorMessageInfo', 'file');
 
 
 
@@ -249,7 +252,8 @@ module.exports = {
                 .selectSubject('Webmaster')
                 .click('@sendButton')
 
-                .assert.containsText('@errorMessage', '');
+                .assert.containsText('@errorMessage', '')
+                .assert.containsText('@errorMessageInfo', 'mail');
             // debugging
             //  .getText('@errorMessage', function(result) {
             //    console.log('Actual Error Message:', result.value);
@@ -266,7 +270,8 @@ module.exports = {
 
                 .click('@sendButton')
 
-                .assert.containsText('@errorMessage', '');
+                .assert.containsText('@errorMessage', '')
+                .assert.containsText('@errorMessageInfo', 'subject');
 
 
 
@@ -274,28 +279,17 @@ module.exports = {
             //  Invalid Submission (no message  ) 
             contactUs
 
-                .setValue('@emailField', 'valid@mail')
+                .setValue('@emailField', 'valid@mail.com')
                 .selectSubject('Webmaster')
                 .click('@sendButton')
 
-                .assert.containsText('@errorMessage', '');
+                .assert.containsText('@errorMessage', '')
+                .assert.containsText('@errorMessageInfo', 'The message cannot be blank.');
 
 
 
 
-            contactUs.navigate();
-            //  Invalid Submission (order reference is wrong  [mustn't be all letters] ) 
-            contactUs
-                .setValue('@messageTextbox', 'order reference.')
-                .setValue('@emailField', 'valid@mail')
-                .selectSubject('Webmaster')
-                .setValue('@orderReferenceInput', 'ebheyfdhgfm')
-                .click('@sendButton')
-
-
-                .assert.containsText('@errorMessage', '');
-
-
+           
             contactUs.navigate();
 
 
@@ -313,6 +307,23 @@ module.exports = {
                 .assert.containsText('@successMessage', 'Your message has been successfully sent to our team.');
 
 
+ //////////////////////////////////bugs
+
+                contactUs.navigate();
+                //  Invalid Submission (order reference is wrong  [mustn't be all letters] ) 
+               
+                contactUs
+                    .setValue('@messageTextbox', 'order reference.')
+                    .setValue('@emailField', 'valid@mail.com')
+                    .selectSubject('Webmaster')
+                    .setValue('@orderReferenceInput', 'ebheyfdhgfm')
+                    .click('@sendButton')
+    
+    
+                    .assert.containsText('@errorMessage', '');
+    
+
+                    
 
             contactUs.navigate();
 
