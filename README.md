@@ -43,3 +43,16 @@ for dress search test
 C:\Users\S0nd0\Documents\UI>npx nightwatch tests/homePageTest.js -e chrome
 ```
 
+
+
+## NightWatchjs API
+
+### please find the  report   inside  a separate folder "report"  inside API folder.
+
+### to run tests:
+
+```console
+C:\Users\S0nd0\Downloads\API> npm test
+```
+
+
