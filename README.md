@@ -59,5 +59,5 @@ C:\Users\S0nd0\Documents\UI>npx nightwatch tests/homePageTest.js -e chrome
 C:\Users\S0nd0\Downloads\API> npm test
 ```
 
-##note:
+## note:
 for both API and UI  the node_modules folder needed to be installed or copied into the project before running it
